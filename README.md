@@ -5,3 +5,30 @@ summary of :19820012326.pdf
 <img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026174122117574736/IMG_20221002_234925.jpg"/>
 <img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026174121735897128/IMG_20221002_234914.jpg"/>
 summary of:19810003469.pdf
+Number of papers 24 
+Number of Pages 720
+<img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026180104981856337/unknown.png"/>
+<img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026180123742978058/unknown.png"/>
+<img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026180175618113627/unknown.png"/>
+<img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026180185072091298/unknown.png"/>
+<img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026180790456959077/unknown.png"/>
+<img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026180808278560838/unknown.png"/>
+<img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026180822421753927/unknown.png"/>
+<img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026181039808331796/unknown.png"/>
+<img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026181341781438484/unknown.png"/>
+<img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026181486547845301/unknown.png"/>
+<img src="https://cdn.discordapp.com/attachments/1025603558952927274/1026181594224001064/unknown.png"/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
