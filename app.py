@@ -5,8 +5,9 @@ import glob
 import re
 import fitz
 from transformers import pipeline
-A="<<<<< Click Here first before summarize"
-Download = st.button("DOWNLOAD EACH MODEL"),st.write(A)
+import pandas as pd
+import matplotlib.pyplot as plt
+
 Summarizeit = st.button("CLICK TO SUMMARIZE")
 st.write("My pdf has 1 research per pdf || Better summarization and keyword graph)")
 Summarizebunch = st.button("CLICK TO SUMMARIZE(multiple research per pdf)")
@@ -55,6 +56,9 @@ if Summarizeit == True:
     model_name = "ml6team/keyphrase-extraction-kbir-inspec"
     extractor = KeyphraseExtractionPipeline(model=model_name)
     summarizer = pipeline('summarization')
+    Abs = False
+    Intro = False 
+    CON = False
 
     for paper in uploaded_files:
         file = paper
@@ -85,32 +89,64 @@ if Summarizeit == True:
                     correctedintro = correctedabs + correctedintro
                 else:
                     correctedintro = correctedabs 
-            elif "CONCLUSION" in text1 :
+            elif "CONCLUSION" in text1 or "SUMMARY" in text1 :
                 text1 = re.sub(r"(@\[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|^rt|http.+?", "", text1)
                 corrected = fix_spelling(text1,max_length=4000)
                 correctecon = corrected[0]['generated_text']
                 st.write('Conclusion at page',i +1)
                 i = i + 1 
+                CON = True
                 if Abs == True or Intro == True:
                     correctedintro =  correctedintro + correctecon
                 else:
                     correctedintro =  correctecon
             else:
                 i = i +1 
+        if Abs == False and Intro  == False and  CON  == False:
+          with fitz.open(paper) as doc:
+            text = ""
+            for page in doc:
+              text += page.get_text()
+              text = re.sub(r"(@\[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|^rt|http.+?", "", text)
+              correctedintro = text
+        else:
+          pass
     summaryfin = summarizer(correctedintro,max_length = 70 , min_length = 30 ,do_sample = False)
     summaryfin = summaryfin[0]['summary_text'] 
     st.write('Path to Pdf File',paper)
     st.write("summary of research:",summaryfin)
-    with fitz.open(paper) as doc:
-        text = ""
-        for page in doc:
-            text += page.get_text()
-            text = re.sub(r"(@\[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|^rt|http.+?", "", text)
-            keyphrases = extractor(text)
-            for word in (keyphrases):
-                text.count(word)
-                st.write(word,"Appeared",text.count(word),"times")
+    texts =""
+    for page_number in range(page_num):   # use xrange in Py2
+        page = pdf_reader.getPage(page_number)
+        texts += page.extractText()
+        texts = re.sub(r"(@\[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|^rt|http.+?", "", texts)
+    keyphrases = extractor(texts)
+    st.write("Keywords")
+    high = []
+    keywords = []
+    for word in (keyphrases):
+      texts.count(word)
+      st.write(word,"Appeared",texts.count(word),"times")
+      keywords.append(word)
+      high.append( texts.count(word))
+    plt.bar(keywords,high, label="Appeared")
+    plt.legend()
+    plt.ylabel('words')
+    plt.xlabel('frequency')
+    plt.title('Keywords')
+    st.pyplot(fig)
+
+
+        
+    # with fitz.open(stream=uploaded_files.read(), filetype="pdf") as doc:
+    #   # with fitz.open(stream=uploaded_pdf.read(), filetype="pdf") as doc:
+    #     text = ""
+    #     for page in doc:
+    #         text += page.get_text()
+    #         text = re.sub(r"(@\[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|^rt|http.+?", "", text)
+    #         keyphrases = extractor(text)
+    #         for word in (keyphrases):
+    #             text.count(word)
+    #             st.write(word,"Appeared",text.count(word),"times")
 
     st.write('-------------------------------------------------------------------------------------------------------------------------------------------')
-
-
