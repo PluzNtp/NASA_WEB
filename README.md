@@ -1,6 +1,8 @@
 # NASA_WEB
 Rush project This is for space app challenge 2022
-Try the prototype here
+A 48 Hour Hackathon 
+Solution for:Can ai preserve out legacy 
+Try the prototype here:
 https://colab.research.google.com/drive/1Wg1Ovl-MzrLLfYukgq5ajVuJ3kjZ3tnm?usp=sharing
 <h1>THESE ARE THE SUMMARIZATION  </h1>
 summary of :19820012326.pdf
