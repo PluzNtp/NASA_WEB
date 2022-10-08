@@ -3,9 +3,9 @@ Rush project This is for space app challenge 2022
 
 A 48 Hour Hackathon 
 
-Solution for:Can Ai preserve our legacy 
+Solution for:Can Ai preserve our legacy:https://2022.spaceappschallenge.org/challenges/2022-challenges/science-legacy/details
 
-Due to The time given we decided against trying to Train a new Machinel learning model
+Due to The time given we decided against trying to Train a new Machine learning model
 
 instead we used transformer pipeline
 
