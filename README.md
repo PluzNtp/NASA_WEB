@@ -5,6 +5,8 @@ A 48 Hour Hackathon
 
 Solution for:Can Ai preserve our legacy 
 
+This project uses Transformer pipeline (Alot)
+
 Try the prototype here:
 https://colab.research.google.com/drive/1Wg1Ovl-MzrLLfYukgq5ajVuJ3kjZ3tnm?usp=sharing
 <h1>THESE ARE THE SUMMARIZATION  </h1>
