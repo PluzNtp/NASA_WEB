@@ -10,6 +10,7 @@ Due to The time given we decided against trying to Train a new Machine learning 
 instead we used transformer pipeline
 
 for more info vist here:https://www.canva.com/design/DAFNyrU3r9I/xeBRlFT_b04QGRHfvZKQAQ/view?utm_content=DAFNyrU3r9I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 Try the prototype here:
 https://colab.research.google.com/drive/1Wg1Ovl-MzrLLfYukgq5ajVuJ3kjZ3tnm?usp=sharing
 <h1>THESE ARE THE SUMMARIZATION  </h1>
