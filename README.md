@@ -1,4 +1,4 @@
-# NASA_WEB
+# SUMMARIZER_WEB
 Rush project This is for space app challenge 2022
 
 A 48 Hour Hackathon 
